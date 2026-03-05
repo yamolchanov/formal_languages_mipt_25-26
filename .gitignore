@@ -1,0 +1,6 @@
+earley
+earley.out
+tests
+tests.out
+./vscode
+.gitlab-ci.yml
