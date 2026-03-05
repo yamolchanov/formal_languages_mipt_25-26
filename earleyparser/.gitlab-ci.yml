@@ -1,0 +1,16 @@
+stages:
+  - test
+
+test_job:
+  stage: test
+  image: alpine:latest
+  tags:
+    - cpu
+
+  before_script:
+    - apk update
+    - apk add --no-cache build-base git
+
+  script:
+    - g++ -std=c++17 tests.cpp -o tests
+    - ./tests
